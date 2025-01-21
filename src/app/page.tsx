@@ -46,11 +46,11 @@ export default function HomePage() {
                   inteligência financeira
                 </span>
               </h1>
-              <p className="mb-8 max-w-3xl sm:max-w-2xl text-lg text-center sm:text-left opacity-90 md:text-xl">
+              <p className="mb-8 max-w-1xl sm:max-w-2xl px-2 sm:px-1 text-lg text-center sm:text-left opacity-90 md:text-xl">
                 Há mais de uma década, transformamos o futuro de milhares de
                 clientes através de consórcios seguros e planejados.
               </p>
-              <div className="flex items-center justify-center gap-4 sm:flex-row sm:justify-start sm:pl-20">
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-start sm:pl-20">
                 <Dialog
                   open={isSimulationOpen}
                   onOpenChange={setIsSimulationOpen}
@@ -58,7 +58,7 @@ export default function HomePage() {
                   <DialogTrigger asChild>
                     <Button
                       size="xl"
-                      className="bg-[#B9DF4C] text-[#1A524F] hover:bg-[#B9DF4C]/90"
+                      className="bg-[#B9DF4C] text-[#1A524F] hover:bg-[#B9DF4C]/90 w-full sm:w-auto"
                     >
                       Simular Consórcio
                     </Button>
@@ -71,7 +71,7 @@ export default function HomePage() {
                 <Button
                   variant="outline"
                   size="xl"
-                  className="border-[#B9DF4C] text-[#B9DF4C] hover:bg-[#B9DF4C] hover:text-[#1A524F]"
+                  className="border-[#B9DF4C] text-[#B9DF4C] hover:bg-[#B9DF4C] hover:text-[#1A524F] w-full sm:w-auto"
                 >
                   Fale Conosco
                 </Button>
@@ -99,7 +99,7 @@ export default function HomePage() {
               Somos líderes em contemplações e satisfação do cliente
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <StatisticsCard
               number={5752}
               label="Contemplações no último mês"
