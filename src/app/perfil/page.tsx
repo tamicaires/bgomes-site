@@ -97,7 +97,7 @@ export default function ProfilePage() {
             Voltar para o site
           </Link>
 
-          <div className="flex justify-center w-full mb-6">
+          <div className="flex justify-center w-full mb-2">
             <img
               src="https://i.ibb.co/S3PMyMZ/logo.png"
               alt="BGomes Logo"
@@ -105,8 +105,8 @@ export default function ProfilePage() {
             />
           </div>
 
-          <p className="text-white/80 px-10 mb-8 text-center">
-            Transformando sonhos em realidade há mais de 10 anos através de
+          <p className="text-white/80 px-10 mb-4 text-center">
+            Há mais de 10 anos transformando sonhos em realidade através de
             consórcios seguros e planejados.
           </p>
         </div>
@@ -155,9 +155,8 @@ export default function ProfilePage() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <link.icon className="w-5 h-5" />
+                  <link.icon className="w-5 h-5 text-custom-yellow" />
                   <span className="font-medium">{link.title}</span>
-                  <ExternalLink className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
                 </MotionLink>
               ))}
             </div>
