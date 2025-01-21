@@ -83,7 +83,7 @@ export function ReelsSection() {
       </div>
 
       <Dialog open={!!selectedReel} onOpenChange={() => setSelectedReel(null)}>
-        <DialogContent className="max-w-3xl p-0">
+        <DialogContent className="max-w-3xl p-0 h-[95vh]">
           {selectedReel && (
             <div className="aspect-[9/16] w-full">
               <iframe
