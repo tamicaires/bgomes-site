@@ -3,19 +3,97 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: 185, 223, 76; /* #B9DF4C */
+  --secondary: 26, 82, 79; /* #1A524F */
+  --background: 255, 255, 255; /* White */
+  --radius: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.hero-gradient {
+  background: linear-gradient(135deg, #1a524f 0%, rgba(26, 82, 79, 0.9) 100%);
+}
+
+.advantages-gradient {
+  background: linear-gradient(90deg, #b9df4c 0%, rgba(185, 223, 76, 0.9) 100%);
+}
+
+.footer-gradient {
+  background: linear-gradient(135deg, #1a524f 0%, rgba(26, 82, 79, 0.95) 100%);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #b9df4c 0%, rgba(185, 223, 76, 0.9) 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #1a524f 0%, rgba(26, 82, 79, 0.9) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, rgb(var(--secondary)) 0%, rgb(var(--secondary) / 0.8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-dot::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgb(var(--primary) / 0.3);
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-dot:last-child::before {
+  display: none;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.card-hover {
+  transition: all 0.3s ease;
 }
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(var(--secondary), 0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
+}
+
