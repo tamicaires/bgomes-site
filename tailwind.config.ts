@@ -44,7 +44,7 @@ export default {
         'custom-dark': '#25625f',
         'custom-gradient': '#2a6865',
 				'custom-color': '#25625f',
-        'custom-yellow': '#c4e652',
+        'custom-yellow': '#add346',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

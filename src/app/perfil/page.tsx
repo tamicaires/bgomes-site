@@ -1,11 +1,24 @@
-"use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Instagram, Facebook, Youtube, Globe, ArrowLeft, ExternalLink } from "lucide-react"
-import Link from "next/link"
-import { motion } from "framer-motion"
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Facebook,
+  Youtube,
+  Globe,
+  ArrowLeft,
+  ExternalLink,
+  Calculator,
+  MessageSquareDiff,
+  UserRound,
+} from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
-const MotionLink = motion.a
+const MotionLink = motion.a;
 
 export default function ProfilePage() {
   const socialLinks = [
@@ -33,7 +46,7 @@ export default function ProfilePage() {
       url: "https://youtube.com/bgomes",
       color: "from-[#FF0000] to-[#c4302b]",
     },
-  ]
+  ];
 
   const contactInfo = [
     {
@@ -51,25 +64,25 @@ export default function ProfilePage() {
       text: "São Paulo, SP",
       url: "https://maps.google.com",
     },
-  ]
+  ];
 
   const quickLinks = [
     {
       title: "Simular Consórcio",
       description: "Faça uma simulação personalizada agora mesmo",
-      icon: "💰",
+      icon: Calculator,
     },
     {
       title: "Fale Conosco",
       description: "Entre em contato com nossa equipe",
-      icon: "💬",
+      icon: MessageSquareDiff,
     },
     {
       title: "Área do Cliente",
       description: "Acesse sua conta BGomes",
-      icon: "👤",
+      icon: UserRound,
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-white w-full">
@@ -92,8 +105,9 @@ export default function ProfilePage() {
             />
           </div>
 
-          <p className="text-white/80 px-10 mb-8 text-center">
-            Transformando sonhos em realidade há mais de 10 anos através de consórcios seguros e planejados.
+          <p className="text-white/80 px-24 mb-8 text-center">
+            Transformando sonhos em realidade há mais de 10 anos através de
+            consórcios seguros e planejados.
           </p>
         </div>
       </div>
@@ -111,11 +125,17 @@ export default function ProfilePage() {
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
                 >
-                  <div className="flex items-start gap-4">
-                    <span className="text-2xl">{link.icon}</span>
+                  <div className="flex items-center gap-4">
+                    <div className="bg-custom-yellow/15 p-2 rounded-md">
+                      <link.icon className="w-7 h-7 text-custom-yellow" />
+                    </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-[#0c2c2b] mb-1">{link.title}</h3>
-                      <p className="text-sm text-gray-600">{link.description}</p>
+                      <h3 className="font-semibold text-[#0c2c2b] mb-1">
+                        {link.title}
+                      </h3>
+                      <p className="text-sm text-gray-600">
+                        {link.description}
+                      </p>
                     </div>
                     <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-[#1A524F] transition-colors" />
                   </div>
@@ -131,7 +151,7 @@ export default function ProfilePage() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-3 p-4 rounded-xl bg-gradient-to-r ${link.color} text-white transition-all hover:shadow-lg group`}
+                  className={`flex items-center gap-3 p-4 rounded-xl bg-gradient-to-r bg-custom-color text-white border border-custom-color transition-all hover:shadow-lg group`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -143,7 +163,7 @@ export default function ProfilePage() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-4 border-t border-gray-100 pt-6">
+            <div className="space-y-4 border-t border-gray-100 pt-6 flex flex-col items-center justify-center">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={index}
@@ -151,7 +171,7 @@ export default function ProfilePage() {
                   className="flex items-center gap-3 p-2 -mx-2 rounded-lg text-gray-600 hover:text-[#1A524F] hover:bg-[#1A524F]/5 transition-colors"
                   whileHover={{ x: 4 }}
                 >
-                  <info.icon className="w-5 h-5" />
+                  <info.icon className="w-5 h-5 text-custom-yellow" />
                   <span className="font-medium">{info.text}</span>
                 </motion.a>
               ))}
@@ -163,10 +183,10 @@ export default function ProfilePage() {
       {/* Footer */}
       <footer className="text-center py-8">
         <p className="text-gray-500 text-sm">
-          © {new Date().getFullYear()} BGomes Consórcios. Todos os direitos reservados.
+          © {new Date().getFullYear()} BGomes Consórcios. Todos os direitos
+          reservados.
         </p>
       </footer>
     </div>
-  )
+  );
 }
-
