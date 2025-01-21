@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { StatisticsCard } from "@/components/statistics-card";
 import { Timeline } from "@/components/timeline";
 import { AdvantagesGrid } from "@/components/advantages-grid";
