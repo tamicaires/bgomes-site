@@ -1,4 +1,4 @@
-import { Bike, Car, Home, Truck } from "lucide-react";
+import { Car, Home, Truck } from "lucide-react";
 
 export const partners = [
   {
