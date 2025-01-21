@@ -92,7 +92,7 @@ export default function ProfilePage() {
             />
           </div>
 
-          <p className="text-white/80 px-24 mb-8 text-center">
+          <p className="text-white/80 px-10 mb-8 text-center">
             Transformando sonhos em realidade há mais de 10 anos através de consórcios seguros e planejados.
           </p>
         </div>
