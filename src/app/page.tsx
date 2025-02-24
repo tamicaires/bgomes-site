@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { solutions } from "@/constants";
 import { PartnersSection } from "@/components/partners-section";
-import logo from "../../public/logo.png";
+import logo from "../assets/logo.png";
 import Image from "next/image";
 
 export default function HomePage() {

@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import logo from "../../public/logo.png";
+import logo from "../../assets/logo.png";
 import Image from "next/image";
 
 const MotionLink = motion.a;
