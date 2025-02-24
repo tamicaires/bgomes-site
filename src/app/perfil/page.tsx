@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import logo from "../../public/logo.png";
+import Image from "next/image";
 
 const MotionLink = motion.a;
 
@@ -98,15 +100,11 @@ export default function ProfilePage() {
           </Link>
 
           <div className="flex justify-center w-full mb-2">
-            <img
-              src="https://i.ibb.co/S3PMyMZ/logo.png"
-              alt="BGomes Logo"
-              className="w-full max-w-[250px] h-auto "
-            />
+            <Image src={logo} alt="Englobal Logo" height={40} />
           </div>
 
           <p className="text-white/80 px-10 mb-4 text-center">
-            Há mais de 10 anos transformando sonhos em realidade através de
+            Há mais de 20 anos transformando sonhos em realidade através de
             consórcios seguros e planejados.
           </p>
         </div>
@@ -182,7 +180,7 @@ export default function ProfilePage() {
       {/* Footer */}
       <footer className="text-center py-8">
         <p className="text-gray-500 text-sm">
-          © {new Date().getFullYear()} BGomes Consórcios. Todos os direitos
+          © {new Date().getFullYear()} Englobal Consórcios. Todos os direitos
           reservados.
         </p>
       </footer>

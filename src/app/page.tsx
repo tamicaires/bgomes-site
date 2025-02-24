@@ -7,10 +7,21 @@ import { AdvantagesGrid } from "@/components/advantages-grid";
 import { SimulationDialog } from "@/components/simulation-dialog";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
-import { ArrowRight, Phone, Mail, MapPin, Check } from "lucide-react";
-import { ReelsSection } from "@/components/reels-section";
+import {
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ChartNoAxesColumn,
+  TrendingUp,
+  UserRoundCheck,
+  RefreshCcwDot,
+} from "lucide-react";
 import { solutions } from "@/constants";
 import { PartnersSection } from "@/components/partners-section";
+import logo from "../../public/logo.png";
+import Image from "next/image";
 
 export default function HomePage() {
   const [isSimulationOpen, setIsSimulationOpen] = useState(false);
@@ -21,13 +32,7 @@ export default function HomePage() {
       <header className="bg-custom-bg bg-custom-pattern bg-center px-4 py-12 pb-36 text-white">
         <div className="mx-auto max-w-7xl">
           <nav className="mb-12 flex items-center justify-between">
-            <img
-              src="https://i.ibb.co/S3PMyMZ/logo.png"
-              alt="BGomes Logo"
-              width={120}
-              height={40}
-              className="relative z-10"
-            />
+            <Image src={logo} alt="Englobal Logo" height={40} />
             <Button
               variant="outline"
               size="xl"
@@ -93,7 +98,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-[#1A524F] md:text-4xl">
-              Por que escolher a BGomes Consórcio?
+              Por que escolher a Englobal Consórcio?
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-[#1A524F]/80">
               Somos líderes em contemplações e satisfação do cliente
@@ -103,17 +108,25 @@ export default function HomePage() {
             <StatisticsCard
               number={5752}
               label="Contemplações no último mês"
+              icon={<ChartNoAxesColumn className="text-[#afd447] h-10 w-10" />}
               delay={0}
             />
             <StatisticsCard
               number={422747}
               label="Contemplações totais"
+              icon={<TrendingUp className="text-[#afd447] h-10 w-10" />}
               delay={1}
             />
-            <StatisticsCard number={389288} label="Clientes ativos" delay={2} />
+            <StatisticsCard
+              number={389288}
+              label="Clientes ativos"
+              icon={<UserRoundCheck className="text-[#afd447] h-10 w-10" />}
+              delay={2}
+            />
             <StatisticsCard
               number={348}
               label="Grupos em andamento"
+              icon={<RefreshCcwDot className="text-[#afd447] h-10 w-10" />}
               delay={3}
             />
           </div>
@@ -141,7 +154,7 @@ export default function HomePage() {
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold text-white md:text-4xl">
               Vantagens da{" "}
-              <span className="text-[#B9DF4C]">BGomes Consórcio</span>
+              <span className="text-[#B9DF4C]">Englobal Consórcio</span>
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-white/80">
               Descubra por que somos a escolha certa para realizar seus
@@ -298,33 +311,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Reels Section */}
-      <section className="section-padding bg-white px-8 sm:px-4">
-        <div className="mx-auto max-w-6xl px-5 sm:px-4">
-          <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold text-[#1A524F] md:text-4xl">
-              Aprenda Mais Sobre Consórcios
-            </h2>
-            <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              Assista nossos vídeos explicativos e tire suas dúvidas
-            </p>
-          </div>
-          <ReelsSection />
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="footer-gradient px-4 py-16 text-white">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 md:grid-cols-4">
             <div>
-              <img
-                src="https://i.ibb.co/S3PMyMZ/logo.png"
-                alt="BGomes Logo"
-                width={120}
-                height={40}
-                className="mb-6"
-              />
+              <Image src={logo} alt="Englobal Logo" height={40} />
               <p className="text-sm opacity-80">
                 Transformando sonhos em realidade há mais de 10 anos.
               </p>
@@ -341,7 +333,7 @@ export default function HomePage() {
                 <li className="flex items-center gap-2">
                   <Mail className="h-4 w-4 text-[#B9DF4C]" />
                   <span className="text-sm opacity-80">
-                    contato@bgomes.com.br
+                    contato@englobal.com.br
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
@@ -397,8 +389,8 @@ export default function HomePage() {
           </div>
           <div className="mt-12 border-t border-white/10 pt-8 text-center">
             <p className="text-sm opacity-60">
-              © {new Date().getFullYear()} BGomes Consórcios. Todos os direitos
-              reservados.
+              © {new Date().getFullYear()} Englobal Consórcios. Todos os
+              direitos reservados.
             </p>
           </div>
         </div>

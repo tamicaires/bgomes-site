@@ -11,7 +11,7 @@ export function PartnersSection() {
           Representamos as 4 gigantes mais confiáveis e reconhecidas no mercado
           de consórcios, garantindo qualidade e segurança para nossos clientes.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-8 px-2 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-4 items-center justify-center gap-8 px-2 md:gap-14">
           {partners.map((partner) => (
             <div
               key={partner.name}
